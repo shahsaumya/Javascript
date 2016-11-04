@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Date Validation</title>
+<script>
+
+function find()
+{
+var mon = new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+dom = document.sample
+var input = dom.text1.value
+parts = input.split("/")
+var yr = parseInt(parts[2])
+var month = parseInt(parts[1])+1
+var days = parseInt(parts[0])
+
+alert(validateleapyear(yr));
+
+}
+
+function validateleapyear(yr)
+{
+	return (yr%4==0 && (yr%400==0 || yr%100!=0)) ? 1 : 0 ;
+}
+
+function validatemonth()
+{if(month==1||month==3||month==5||month==7||month==8||month==10||month==12)
+{
+if(days>31)
+{document.write("Invalid date! "+mon[month-1])+" cannot have more than 31 days")
+return 1
+}
+else
+{document.write("It is "+mon[month-1])
+return 0
+}
+}
+if(month==4||month==6||month==9||month==11)
+{
+if(days>30)
+{document.write("Invalid date! "+mon[month-1])+" cannot have more than 30 days")
+return 1
+}
+else
+{document.write("It is "+mon[month-1])
+return 0
+}
+}
+}
+
+function validatefuture()
+{
+da = new Date()
+var currentyear = da.getFullYear()
+var currentmonth = da.getMonths()
+var currentdate = da.getDate()
+
+if(days>currentdate)
+{
+if(month>currentmonth && yr>currentyear)
+return 0
+else
+{document.write("This date is in the present")
+return 1
+}
+}
+else
+{document.write("This date is in the present")
+return 1
+}
+}
+
+function validate()
+{
+if(month==2 && validateleapyear()==1)
+alert("validated")
+if(validatemonth()==1)
+alert("validated")
+else
+alert("Entry of date is invalid")
+if(validatefuture()==1)
+alert('validated")
+else
+alert("Entry is in the future")
+}
+
+</script>
+</head>
+<body>
+<form name = "sample">
+Enter date : <input type = "text" name = "text1" default = "dd/mm/yyyy">
+<input type = "button" onclick = find() value = "Validate">
+</form
+</body>
+</html>

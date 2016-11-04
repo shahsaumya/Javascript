@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Background</title>
+<script language = "javascript">
+var n=0
+function bach()
+{
+	var back = new Array()
+back[0]="red"
+back[1]="blue"
+back[2]="yellow"
+back[3]="green"
+back[4]="black"
+document.bgColor = back[n];
+n=n+1
+if(n>4)
+	n=0;
+}
+</script>
+</head>
+<body onclick = "bach()">
+</body>
+</html>

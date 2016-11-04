@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Button</title>
+<script>
+i=-1
+k=0
+var colour = new Array("red","yellow","blue","green","pink","black")
+function cols()
+{
+i=i+1
+k=k+1
+dom = document.sample
+document.bgColor=colour[i]
+if(k==6)
+{dom.button1.value=colour[0]
+k=0
+}
+else
+dom.button1.value=colour[k]
+if(i==5)
+i=-1
+}
+</script>
+</head>
+<body>
+<form name = "sample">
+<input type = "button" name = "button1" value = "red" onclick="cols()">
+</form>
+</body>
+</html>

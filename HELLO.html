@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>FullDate</title>
+<script>
+da = new Date()
+var dat = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+function calc()
+{
+var today=""
+var day = dat[da.getDay()]
+var yr = da.getFullYear()
+today= day+", "+da.getDate()
+
+if((dat%10)==1 && dat!=11)
+document.write(today+"<sup>st</sup> "+yr)
+
+else if((dat%10)==2 && dat!=12)
+document.write(today+"<sup>nd</sup> "+yr)
+
+else if((dat%10)==3 && dat!=13)
+document.write(today+"<sup>rd</sup> "+yr)
+
+else
+document.write(today+"<sup>th</sup> "+yr)
+
+}
+</script>
+</head>
+<body>
+<form name = "sample">
+<input type="button" value = "Find!" onclick = "calc()">
+</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>wow</title>
+<script>
+da = new Date()
+function calc()
+{
+var hrs= da.getHours()
+var min = da.getMinutes()
+if (min<10)
+min= "0"+min
+if(hrs == 12)
+{alert("It is "+hrs+":"+min+"PM")
+document.write("It is "+hrs+":"+min+"PM")
+}
+
+else if(hrs>12)
+{alert("It is "+(hrs-12)+":"+min+"PM")
+document.write("It is "+(hrs-12)+":"+min+"PM")
+}
+
+else if(hrs<12)
+{alert("It is "+hrs+":"+min+"AM")
+document.write("It is "+hrs+":"+min+"AM")
+}
+else if(hrs==0)
+{alert("It is "+(hrs+12)+":"+min+"AM")
+document.write("It is "+(hrs+12)+":"+min+"AM")
+}
+}
+</script>
+</head>
+<body>
+<form name = "sample">
+<input type = "button" value = "AM/PM" onclick = "calc()">  
+</form>
+</body>
+</html>

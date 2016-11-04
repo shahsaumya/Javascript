@@ -1,0 +1,57 @@
+<html>
+<head>Exercises</head>
+<script>
+var i,j;
+for(i=1;i<=5;i++)
+{	
+	str = "";
+	for(j=1;j<=i;j++)
+	str += '*';
+	console.log(str);
+}
+console.log("\n");
+str=""
+for(i=1;i<=100;i++)
+{
+	if(i%3==0 && i%5!=0)
+		console.log("Fizz");
+	else if(i%5==0 && i%3!=0)
+		console.log("Buzz");
+	else if(i%15==0)
+		console.log("FizzBuzz");
+	else
+		console.log(i);
+}
+console.log("\n");
+for(i=1;i<=8;i++)
+{
+	if(i%2!=0)
+		str = " ";
+	else
+		str = "#";
+	for(j=2;j<=8;j++)
+	{
+		if(i%2!=0)
+		{
+
+			if(j%2==0)
+				str+="#";
+			else
+				str+=" ";
+		}
+		
+
+		else
+		{
+			if(j%2==0)
+			str+= " ";
+			else
+			str+= "#";
+		}
+	}
+	console.log(str)
+}
+</script>
+</html>
+
+

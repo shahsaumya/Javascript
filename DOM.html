@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>DOM</title>
+<script>
+function calculate()
+{
+dom= document.sample
+n1 = parseInt(dom.text1.value)
+n2 =parseInt(dom.text2.value)
+sum =n1+n2
+dom.text3.value=sum
+}
+</script>
+<body>
+<form name= "sample">
+Enter first number : <input type = "text" name= "text1"><br><br>Enter second number : <input type = "text" name = "text2">
+<br><input type = "button" value = "Add" onclick = "calculate()">&nbsp;&nbsp;<input type = "text" name = "text3"><br>
+<br><input type = "reset" value = "Reset">
+
+</form>
+</body>
+</html>

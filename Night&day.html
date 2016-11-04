@@ -1,0 +1,45 @@
+<html>
+<title>Night&day</title>
+<script language = "javascript">
+function colour()
+{
+var hrs, mins
+tod = new Date();
+hrs = tod.getHours()
+mins = tod.getMinutes()
+if(mins<10)
+mins = "0"+mins
+if(hrs >= 5 && hrs<12)
+
+{document.bgColor="yellow"
+alert("It is Morning!")
+document.write(hrs+":"+mins)
+}
+
+else if(hrs >= 12 && hrs<17)
+{document.bgColor="red"
+alert("It is Afternoon!")
+document.write(hrs+":"+mins)
+
+}
+
+else if(hrs >= 17 && hrs<20)
+{document.bgColor="blue"
+alert("It is Evening!")
+document.write(hrs+":"+mins)
+
+}
+
+else
+{document.bgColor="black"
+alert("It is Night!")
+document.write(hrs+":"+mins)
+
+}
+}
+
+</script>
+</head>
+<body onclick = "colour()">
+</body>
+</html>

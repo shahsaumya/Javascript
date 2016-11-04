@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Goods</title>
+<script>
+var name = new Array("Lux","Colgate","Vim Soaps","Protein Ex","Dalda Refined Oil","India Gate Basmati Rice","Nivea Moisturizer","Garnier Shampoo","Air Wick Air Freshner","Ponds Talcum Powder")
+var c=1
+function calculate()
+{
+var dom = document.sample2
+var price = new Array()
+price[0]=10
+price[1]=10
+price[2]=10
+price[3]=10
+price[4]=10
+price[5]=10
+price[6]=10
+price[7]=10
+price[8]=10
+price[9]=10
+n=parseInt(dom.myselect.value)
+dom.text1.value=price[n]
+}
+function calc()
+{var dom = document.sample2
+dom.text3.value = dom.text1.value*dom.text2.value
+}
+function bill()
+{
+window.open("Bill.html")
+bill.document.write("<html><body><table cellspacing = 5 cellpadding = 10 width = 60% align = center><tr><th>Sr No.</th><th>Item</th><th>Price</th><th>Quantity</th><th>Total Price</th></tr>")
+bill.document.write("<tr><td>"+c+"</td><td>"+name[myselect]+"</td><td>"+dom.text1.value+"</td><td>"+dom.text2.value+"</td><td>"+dom.text3.value+"</td></tr>")
+c=c+1}
+
+</script>
+</head>
+<body>
+<form name = "sample2">
+<select name = "myselect" onchange=calculate()>
+<option value = '0'>Lux</option>
+<option value = '1'>Colgate</option>
+<option value = '2'>Vim Soaps</option>
+<option value = '3'>Protein Ex</option>
+<option value = '4'>Dalda Refined Oil</option>
+<option value = '5'>India Gate Basmati Rice</option>
+<option value = '6'>Nivea Moisturizer</option>
+<option value = '7'>Garnier Shampoo</option>
+<option value = '8'>Air Wick Air Freshner</option>
+<option value = '9'>Ponds Talcum Powder</option>
+</select>
+<br><br>
+Price : <input type = "text" name = "text1" size= 20 maxlength =20 readonly><br><br>
+Quantity : <input type = "text" name = "text2" size= 20 maxlength =20 onchange = calc()><br><br>
+Total : <input type = "text" name = "text3" size= 20 maxlength =20>
+<input type = "button" value = "Bill" name = "mybill" onclick = "bill()">
+</form>
+</body>
+</html>

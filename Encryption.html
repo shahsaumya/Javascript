@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Encryption</title>
+<script>
+function encrypt()
+{
+alert("lol")
+var dom = document.sample
+var na = dom.text1.value
+var ret = ""
+for (var i=0;i<na.length;i=i+1)
+{
+alert("loll")
+var b= na.charCodeAt(i)+5
+ret += (String.fromCharCode(b))
+}
+document.write(ret)
+}
+</script>
+</head>
+<body>
+<form name = "sample">
+Enter a string : <input type ="text" name = "text1">
+<input type = "button" value = "Encrypt" onclick = encrypt()>
+</form>
+</body>
+</html>

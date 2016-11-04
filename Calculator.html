@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Calculator</title>
+<script>
+function findadd()
+{
+dom = document.sample1
+n1 = parseInt(dom.text1.value)
+n2 =parseInt(dom.text2.value)
+sum =n1+n2
+dom.text3.value=sum
+}
+function findsub()
+{
+dom = document.sample1
+nu1 = parseInt(dom.text1.value)
+nu2 =parseInt(dom.text2.value)
+result =nu1-nu2
+dom.text3.value=result
+}
+function findmul()
+{
+dom = document.sample1
+num1 = parseInt(dom.text1.value)
+num2 =parseInt(dom.text2.value)
+resu =num1*num2
+dom.text3.value=resu
+}
+function finddiv()
+{
+dom = document.sample1
+a = parseInt(dom.text1.value)
+b = parseInt(dom.text2.value)
+res =a/b
+dom.text3.value=res
+}
+</script>
+<body>
+<form name = "sample1">
+<table border width =50%  cellspacing = 1 cellpadding = 5 align = "center">
+<tr><td colspan = 2>
+Enter number 1 : <input type = "text" name = "text1" maxlength = 10></td>
+<td colspan = 2>
+Enter number 2 : <input type = "text" name = "text2" maxlength = 10></td>
+</tr>
+<tr>
+<td colspan = 4>
+Result : <input type = "text" name = "text3" maxlength = 20></td>
+</tr>
+<tr>
+<td><input type ="button" value= "+" onclick = "findadd()"></td>
+<td><input type ="button" value= "-" onclick = "findsub()"></td>
+<td><input type ="button" value= "*" onclick = "findmul()"></td>
+<td><input type ="button" value= "/" onclick = "finddiv()"></td>
+</tr>
+<tr>
+<td colspan = 4><align= center><input type = "reset" value = "Reset"></align></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
